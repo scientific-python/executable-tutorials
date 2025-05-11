@@ -11,6 +11,6 @@ class Thing:
 thing = Thing(3)
 ```
 
-Here is an image that is bundled with the recipe.
+Here is an image that is bundled with the tutorial.
 
 ![Aerial photo on NSLS-II at Brookhaven National Laboratory](./nsls2-aerial.jpg)
