@@ -15,18 +15,17 @@ git clone git@github.com:scientific-python/executable-tutorials
 
 ## Overview
 
-Each "recipe" is a directory under `docs/recipes/`. It may contain one or more
-Markdown (`.md`) files with a mixture of narrative text and code. Each recipe
+Each tutorial is a directory under `tutorials/`. It may contain one or more
+Markdown (`.md`) files with a mixture of narrative text and code. Each tutorial 
 directory may also contain supporting data files, scripts, illustrations,
 solutions to exercises, etc.
 
 ```none
-$ tree docs/
-docs/
+$ tree .
 ├── conf.py
 ├── contributing.md
 ├── index.md
-├── recipes
+├── tutorials
 │   ├── executable
 │   │   ├── basics.md
 │   ├── matplotlib
@@ -78,11 +77,11 @@ Open `build/html/index.html` in a web browser.
 pixi run jupyter lab
 ```
 
-In the file browser, locate one of the examples under `docs/recipes/`. Double
+In the file browser, locate one of the examples under `tutorials/`. Double
 click to open.
 
-Files like `docs/recipes/static/static.md` are plain Markdown files. Files like
-`docs/recipes/executable/basics.md` have a YAML header which enables the
+Files like `tutorials/static/static.md` are plain Markdown files. Files like
+`tutorials/executable/basics.md` have a YAML header which enables the
 documentation build system to convert them to Jupyter notebooks and execute
 them:
 
@@ -120,7 +119,7 @@ The script `test.sh` runs files with executable code from top to bottom and
 prints any unexpected tracebacks.
 
 ```
-pixi run ./test.sh docs/recipes/executable/basics.md
+pixi run ./test.sh tutorials/executable/basics.md
 ```
 
 `````{note}
@@ -159,5 +158,4 @@ Once changes are merged to the `main` branch, the GitHub Actions [Publish workfl
   where users need to be handed Jupyter Notebook files directly, such as Google
   Colab.
 
-[notebooks-branch]: https://github.com/scientific-python/executable-tutorials/tree/notebooks/docs/recipes
 [Publish workflow]: https://github.com/scientific-python/executable-tutorials/actions/workflows/cd.yml
