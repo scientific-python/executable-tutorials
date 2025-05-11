@@ -5,12 +5,12 @@ First, clone this repository.
 With HTTPS:
 
 ```sh
-git clone https://github.com/danielballan/interactive-tutorial-demo
+git clone https://github.com/scientific-python/executable-tutorials
 ```
 
 With SSH:
 ```sh
-git clone git@github.com:danielballan/interactive-tutorial-demo
+git clone git@github.com:scientific-python/executable-tutorials
 ```
 
 ## Overview
@@ -159,5 +159,5 @@ Once changes are merged to the `main` branch, the GitHub Actions [Publish workfl
   where users need to be handed Jupyter Notebook files directly, such as Google
   Colab.
 
-[notebooks-branch]: https://github.com/danielballan/interactive-tutorial-demo/tree/notebooks/docs/recipes
-[Publish workflow]: https://github.com/danielballan/interactive-tutorial-demo/actions/workflows/cd.yml
+[notebooks-branch]: https://github.com/scientific-python/executable-tutorials/tree/notebooks/docs/recipes
+[Publish workflow]: https://github.com/scientific-python/executable-tutorials/actions/workflows/cd.yml
