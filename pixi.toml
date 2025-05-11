@@ -1,9 +1,14 @@
 [project]
-authors = ["Dan Allan <dallan@bnl.gov>"]
+authors = [
+    "Dan Allan <dallan@bnl.gov>",
+    "Brigitta Sipőcz <brigitta.sipocz@gmail.com>",
+    "Ross Barnowski <rossbar@caltech.edu>",
+    "Kyle Sunden <git@ksunden.space>",
+]
 channels = ["conda-forge"]
 description = "Add a short description here"
-name = "interactive-tutorial-demo"
-platforms = ["linux-64"]
+name = "executable-tutorials"
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 version = "0.1.0"
 
 [tasks]
