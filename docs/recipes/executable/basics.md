@@ -27,7 +27,7 @@ a = 8**2
 a
 ```
 
-This cell has an excepted error:
+This cell has an expected error:
 
 ```{code-cell} ipython3
 :tags: [raises-exception]
