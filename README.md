@@ -32,5 +32,5 @@ for a good overview of what this is like to use.
 
 Examples that this is drawing from:
 
-- https://github.com/bsipocz/irsa-tutorials
+- https://github.com/Caltech-IPAC/irsa-tutorials
 - https://github.com/MotherDuck-Open-Source/sql-tutorial
