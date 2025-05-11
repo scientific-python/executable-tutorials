@@ -12,6 +12,13 @@ for a good overview of what this is like to use.
 - **[Jupyter Lite (beta)](https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html)** (works only on the basic executable example so far, missing dependencies for others)
 - **[Binder](https://mybinder.org/v2/gh/scientific-python/executable-tutorials/notebooks)**
 
+### Notes on the notebook file format
+
+We do use MyST Markdown format for the notebooks, please visit [the upstream documentation](https://mystmd.org/guide/md-vs-ipynb) to learn more about the reasoning behind the choice.
+However, we add it here that you can easily have the same user experience in JupyterLab if these two dependencies are installed:
+ - [jupytext library](https://pypi.org/project/jupytext/)
+ - [jupyterlab-myst JupyterLab extension](https://pypi.org/project/jupyterlab-myst/)
+
 
 ## Goals
 
