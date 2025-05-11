@@ -1,15 +1,15 @@
 # Executable Tutorials
 
 A repository demonstrating one way to manage and distribute interactive tutorials.
-See the [Guide to Contributing](https://danielballan.github.io/interactive-tutorial-demo/contributing.html)
+See the [Guide to Contributing](https://scentific-python.org/executable-tutorials/contributing.html)
 for a good overview of what this is like to use.
 
 ## Demo Links
 
 - **[Tutorials (a.k.a. recipes)](https://github.com/scientific-python/executable-tutorials/tree/notebooks/docs/recipes)** are written in MyST Markdown.
 - They are published in **[Jupyter notebook](https://github.com/scientific-python/executable-tutorials/tree/notebooks/docs/recipes)** format, on the `notebooks` branch of this repo, which can be used in Colab, Binder, etc.
-- Executed examples are **[published](https://danielballan.github.io/interactive-tutorial-demo/)** on a GitHub Pages site.
-- **[Jupyter Lite (beta)](https://danielballan.github.io/interactive-tutorial-demo/jupyterlite/lab/index.html)** (works only on the basic executable example so far, missing dependencies for others)
+- Executed examples are **[published](https://scientific-python.github.io/exeuctable-tutorials/)** on a GitHub Pages site.
+- **[Jupyter Lite (beta)](https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html)** (works only on the basic executable example so far, missing dependencies for others)
 - **[Binder](https://mybinder.org/v2/gh/scientific-python/executable-tutorials/notebooks)**
 
 
