@@ -1,0 +1,46 @@
+[project]
+authors = ["Dan Allan <dallan@bnl.gov>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "interactive-tutorial-demo"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+build = { cmd = [
+    "sphinx-build",
+    "docs",  # source directory
+    "build/html",  # target directory
+    "-n",  # warn about missing references
+    "-W",  # any warnings fail the build
+    "-T",  # show tracebacks
+    "--keep-going",  # do not stop on error
+] }
+clean = "rm -rf build/*"
+start = "jupyter lab"
+
+[activation]
+scripts = ["setup_jupyterlab_config.sh"]
+
+[dependencies]
+python = ">=3.11"
+matplotlib-base = ">=3.9"
+ipympl = ">=0.9"
+jupyterlab = ">=4.2"
+jupyterlab-myst = ">=2.4"
+
+[pypi-dependencies]
+sphinx = ">=8.0.2"
+myst-nb = ">=1.1"
+jupytext = ">=1.16"
+sphinx-book-theme = ">=1.1"
+sphinx-copybutton = ">=0.5"
+
+[feature.jupyterlite.dependencies]
+jupyterlab = "~=4.2.4"
+jupyterlite-core = "==0.4.0"
+jupyterlite-pyodide-kernel = "==0.4.1"
+notebook = "~=7.2.1"
+
+[environments]
+jupyterlite = ["jupyterlite"]

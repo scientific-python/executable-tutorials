@@ -1,3 +1,9 @@
+/build/*
+.ipynb_checkpoints
+/.pixi/*
+
+# The following are boilerplate. It is best practice to handle this generically
+# in ~/.gitignore, but including it here is helpful for beginners.
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
