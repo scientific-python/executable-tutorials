@@ -17,6 +17,7 @@ build = { cmd = [
     "--keep-going",  # do not stop on error
 ] }
 clean = "rm -rf build/*"
+start = "jupyter lab"
 
 [activation]
 scripts = ["setup_jupyterlab_config.sh"]
