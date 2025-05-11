@@ -1,4 +1,4 @@
-# Interactive Tutorial Demo
+# Executable Tutorials
 
 A repository demonstrating one way to manage and distribute interactive tutorials.
 See the [Guide to Contributing](https://danielballan.github.io/interactive-tutorial-demo/contributing.html)
