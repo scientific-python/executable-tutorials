@@ -66,10 +66,10 @@ to start fresh.
 ```
 
 This creates:
-- Executed notebooks, generated from eligible Markdown files, under `build/juptyer_execute/`
-- HTML under `build/html/`
+- Executed notebooks, generated from eligible Markdown files, under `_build/juptyer_execute/`
+- HTML under `_build/html/`
 
-Open `build/html/index.html` in a web browser.
+Open `_build/html/index.html` in a web browser.
 
 ## Develop
 
