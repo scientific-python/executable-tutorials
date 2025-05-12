@@ -1,6 +1,13 @@
 /build/*
 .ipynb_checkpoints
 /.pixi/*
+# We treat this repository as a library, not an application, and thus we do not
+# include the lockfile in source control. For a specific event, like a
+# workshop, we suggest committing the lockfile on a branch dedicated to the
+# event so that all users are guaranteed to receive a consistent environment
+# and do not need to separately solve the environment specification on their
+# machines.
+pixi.lock
 
 # The following are boilerplate. It is best practice to handle this generically
 # in ~/.gitignore, but including it here is helpful for beginners.
