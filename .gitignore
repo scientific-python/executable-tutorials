@@ -1,4 +1,4 @@
-/build/*
+_build/*
 .ipynb_checkpoints
 /.pixi/*
 
