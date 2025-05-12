@@ -30,13 +30,13 @@ jobs:
       - save_cache:
           key: jupyter_ch
           paths:
-            - build/.jupyter_cache
+            - _build/.jupyter_cache
 
       - store_artifacts:
-          path: build/html
+          path: _build/html
 
       - persist_to_workspace:
-          root: build
+          root: _build
           paths:
             - html
 
