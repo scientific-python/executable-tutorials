@@ -15,7 +15,7 @@ version = "0.1.0"
 build = { cmd = [
     "sphinx-build",
     ".",  # source directory
-    "build/html",  # target directory
+    "_build/html",  # target directory
     "-n",  # warn about missing references
     "-W",  # any warnings fail the build
     "-T",  # show tracebacks
