@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Build HTML rendering of notebooks
           no_output_timeout: 30m
-          command: make html
+          command: make SPHINXOPTS="-nWT --keep-going" html
 
       - save_cache:
           key: jupyter_ch
