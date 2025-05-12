@@ -14,7 +14,7 @@ jobs:
 
       - run:
           name: Install CI dependencies
-          command: python -m pip install -r requirements.txt
+          command: pixi install
 
       - restore_cache:
           keys:
@@ -28,13 +28,13 @@ jobs:
       - save_cache:
           key: jupyter_ch
           paths:
-            - _build/.jupyter_cache
+            - build/.jupyter_cache
 
       - store_artifacts:
-          path: _build/html
+          path: build/html
 
       - persist_to_workspace:
-          root: _build
+          root: build
           paths:
             - html
 
