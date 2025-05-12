@@ -32,7 +32,7 @@ jobs:
       - name: Build executed notebooks and HTML
         run: pixi run build
 
-      - name: Upload executed notebooks as GitHub artifact
+      - name: Upload executed notebooks as GitHub artifact (for debugging)
         uses: actions/upload-artifact@v4
         with:
           name: executed-notebooks
@@ -42,7 +42,7 @@ jobs:
       - name: Upload HTML as GitHub artifact (for debugging)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/html
+          path: _build/html
 
   deploy-gh-pages:
     name: Deploy HTML to GitHub Pages
