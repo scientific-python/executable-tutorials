@@ -3,6 +3,6 @@
 ```{toctree}
 :maxdepth: 1
 :glob:
-recipes/**/*
+tutorials/**/*
 contributing
 ```

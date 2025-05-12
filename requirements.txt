@@ -1,0 +1,8 @@
+# For site
+sphinx
+myst-nb
+sphinx-book-theme
+ipympl
+sphinx-copybutton
+# For tutorials
+matplotlib
