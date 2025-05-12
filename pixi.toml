@@ -21,7 +21,7 @@ build = { cmd = [
     "-T",  # show tracebacks
     "--keep-going",  # do not stop on error
 ] }
-clean = "rm -rf build/*"
+clean = "rm -rf _build/*"
 start = "jupyter lab"
 
 [activation]
