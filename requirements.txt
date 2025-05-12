@@ -10,3 +10,4 @@ matplotlib
 pytest
 nbval
 pytest-custom_exit_code
+jupytext
