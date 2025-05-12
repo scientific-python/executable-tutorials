@@ -21,6 +21,7 @@ build = { cmd = [
     "-T",  # show tracebacks
     "--keep-going",  # do not stop on error
 ] }
+test = "test.sh"
 clean = "rm -rf _build/*"
 start = "jupyter lab"
 
@@ -33,6 +34,8 @@ matplotlib-base = ">=3.9"
 ipympl = ">=0.9"
 jupyterlab = ">=4.2"
 jupyterlab-myst = ">=2.4"
+pytest = ">=8.3.5,<9"
+nbval = ">=0.11.0,<0.12"
 
 [pypi-dependencies]
 sphinx = ">=8.0.2"
