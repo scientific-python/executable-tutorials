@@ -6,3 +6,7 @@ ipympl
 sphinx-copybutton
 # For tutorials
 matplotlib
+# for testing
+pytest
+nbval
+pytest-custom_exit_code
