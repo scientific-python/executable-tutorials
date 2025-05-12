@@ -1,6 +1,8 @@
 _build/*
 .ipynb_checkpoints
 /.pixi/*
+*.ipynb
+
 # We treat this repository as a library, not an application, and thus we do not
 # include the lockfile in source control. For a specific event, like a
 # workshop, we suggest committing the lockfile on a branch dedicated to the
