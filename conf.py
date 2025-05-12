@@ -23,7 +23,15 @@ myst_enable_extensions = [
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'notes', '.tox', '.tmp', '.pytest_cache', 'README.md']
+exclude_patterns = [
+    'build',
+    'notes',
+    '.pixi',
+    '.tox',
+    '.tmp',
+    '.pytest_cache',
+    'README.md'
+]
 
 # MyST-NB configuration
 nb_merge_streams = True
