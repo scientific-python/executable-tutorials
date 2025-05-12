@@ -24,12 +24,14 @@ This disables any interactivity, displaying only a PNG image of the figure in th
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
 
-plt.plot([1,2,3,4])
+fig, ax = plt.subplots()
+ax.plot([1,2,3,4])
 ```
 
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
 
-plt.plot([1,4,9,16])
+fig, ax = plt.subplots()
+ax.plot([1,4,9,16])
 ```
