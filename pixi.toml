@@ -44,6 +44,12 @@ jupytext = ">=1.16"
 sphinx-book-theme = ">=1.1"
 sphinx-copybutton = ">=0.5"
 
+[feature.py312.dependencies]
+python = "3.12.*"
+
+[feature.py313.dependencies]
+python = "3.13.*"
+
 [feature.jupyterlite.dependencies]
 jupyterlab = "~=4.2.4"
 jupyterlite-core = "==0.4.0"
@@ -51,4 +57,6 @@ jupyterlite-pyodide-kernel = "==0.4.1"
 notebook = "~=7.2.1"
 
 [environments]
+py312 = ["py312"]
+py313 = ["py313"]
 jupyterlite = ["jupyterlite"]
