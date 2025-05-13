@@ -22,7 +22,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Run all supported OS for one Python version, then add a few extra scenarios
+        # Run all supported OS for one Python version.
+        # The test additional Python versions on Linux only.
         os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: ['3.12']
         toxenv: [py312-test]
@@ -68,3 +69,35 @@ jobs:
 
       - name: Execute notebooks as testing
         run: tox -e py311-buildhtml
+
+  pixi_test:
+    name: ${{ matrix.os }} ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # Run all supported OS for one Python version, then add a few extra scenarios
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ['3.12']
+        toxenv: [py312-test]
+        name: ['with Python 3.12',]
+        include:
+          - python-version: '3.10'
+            toxenv: py310-test-oldestdeps
+            name: with Python 3.10 and oldest versioned dependencies
+            os: ubuntu-latest
+
+          - python-version: '3.13'
+            toxenv: py313-test-devdeps
+            name: with Python 3.13 and developer versioned dependencies
+            os: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+
+    - name: Setup pixi
+      uses: prefix-dev/setup-pixi@v0.8.1
+
+    - name: Test all files
+      run: pixi run ./test.sh --all
