@@ -29,7 +29,7 @@ If we do nothing else, this will display a snapshot of the currently-blank canva
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
-ax.plot([1,2,3])
+ax.plot([1, 2, 3])
 ```
 ````
 

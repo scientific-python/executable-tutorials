@@ -25,7 +25,7 @@ This disables any interactivity, displaying only a PNG image of the figure in th
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
-ax.plot([1,2,3,4])
+ax.plot([1, 2, 3, 4])
 ```
 
 
@@ -33,5 +33,5 @@ ax.plot([1,2,3,4])
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
-ax.plot([1,4,9,16])
+ax.plot([1, 4, 9, 16])
 ```
