@@ -1,4 +1,1 @@
-ipympl
-jupyterlab-myst
-jupytext
-matplotlib
+-r ../requirements.txt
