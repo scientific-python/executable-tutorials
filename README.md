@@ -29,8 +29,6 @@ covering some core features:
 
 - Read the [published examples][static site example].
 
-- Open it on [Binder][binder example] to run the examples in the cloud.
-
 - Download and run the examples locally.
 
   ```sh
@@ -49,6 +47,40 @@ covering some core features:
   pip install -r requirements.txt
   jupyter lab
   ```
+## Build the site
+
+There are currently two distinct technology stacks that support the
+`executable-tutorials` paradigm: a legacy sphinx-based static-site generation
+engine, and the newer [myst][myst-org] project.
+The `executable-tutorials` repo contains information about both development
+patterns, and endeavors to serve as a transition guide between technology
+stacks.
+
+By default, the necessary tooling for both technology stacks is installed with
+`pip install -r requirements.txt`
+
+### Build with sphinx
+
+```bash
+make html
+```
+
+The static site can then be viewed by simply opening the index in any browser,
+for example::
+
+```bash
+firefox _build/html/index.html
+```
+
+### Build with `myst`
+
+```bash
+myst start --execute
+```
+
+This will execute the notebooks, build the site, and set up a server for rendering
+the site.
+The rendered page can be viewed by opening `localhost:3000` in a browser.
 
 ## Make Your Own
 
