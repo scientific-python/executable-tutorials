@@ -13,16 +13,10 @@ project:
     - file: index.md
     - title: Tutorials
       children:
-        - title: Executable
-          children:
-            - file: tutorials/executable/basics.md
-        - title: Matplotlib
-          children:
-            - file: tutorials/matplotlib/interactive_mpl.md
-            - file: tutorials/matplotlib/static_mpl.md
-        - title: Static
-          children:
-            - file: tutorials/static/static.md
+        - file: tutorials/executable/basics.md
+        - file: tutorials/matplotlib/interactive_mpl.md
+        - file: tutorials/matplotlib/static_mpl.md
+        - file: tutorials/static/static.md
     - file: contributing.md
     - file: maintainers.md
     
