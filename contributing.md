@@ -1,4 +1,6 @@
-# Guide to Contributing
+# Guide for Contributors
+
+This guide is for contributing content to the tutorials.
 
 First, clone this repository.
 
