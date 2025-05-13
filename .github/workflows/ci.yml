@@ -1,4 +1,4 @@
-name: Test notebooks
+name: Test
 
 on:
   push:
