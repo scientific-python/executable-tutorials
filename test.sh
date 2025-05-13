@@ -5,10 +5,17 @@ notebook_files=()
 
 # Find Markdown files convert.
 all_markdown_files=$(find tutorials -type f -name "*.md")
+
 if [ $# -gt 0 ]; then
-    files_to_process="$@"
+    if [[ "$1" == all ]]; then
+        files_to_process=$all_markdown_files
+    else
+        files_to_process="$@"
+    fi
+
 else
-    files_to_process=$all_markdown_files
+    # We only want to run tests for the notebooks we touched
+    files_to_process=$(git fetch origin main --depth=1; git diff origin/main --name-only tutorials | grep .md)
 fi
 
 # Identify Markdown files that are Jupytext and convert them all.
