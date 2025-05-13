@@ -1,43 +1,30 @@
 # Executable Tutorials
 
-A repository demonstrating one way to manage and distribute interactive tutorials.
-See the [Guide to Contributing](https://scentific-python.org/executable-tutorials/contributing.html)
-for a good overview of what this is like to use.
+Many organizations maintain collections of tutorials addressing realistic
+problems in a science domain, with runnable code examples written and
+kept current by experts in the tools.
 
-## Demo Links
+- A trove of working snippets to copy and paste
+- A maintained resource for self-guided learning
+- A ready-to-use curriculum for interactive workshops
+- A suite of science domain-specific "integration tests"
 
-- **[Tutorials](https://github.com/scientific-python/executable-tutorials/tree/main/tutorials)** are written in MyST Markdown.
-- Tutorials can be easily edited as notebooks in JupyterLab.
-- Executed tutorials are **[published](https://scientific-python.github.io/exeuctable-tutorials/)** on a GitHub Pages site.
-- **[Jupyter Lite (beta)](https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html)** (works only on the basic executable example so far, missing dependencies for others)
-- **[Binder](https://mybinder.org/v2/gh/scientific-python/executable-tutorials/notebooks)**
+This repository demonstrates one way to configure a collection. It emphasizes the
+following features:
 
-### Notes on the notebook file format
+- Source is in [MyST Markdown][] which is easy for humans to edit and review.
+- The executed examples---code and results---are published as a static site.
+  ([example][static site example])
+- The examples can be opened as Jupyter notebooks to run and edit:
+  - In a user's local environment
+  - On a Binder ([example][binder example])
+  - (Experimental) In the user's browser via Jupyter Lite ([example][jupyterlite example])
 
-We do use MyST Markdown format for the notebooks, please visit [the upstream documentation](https://mystmd.org/guide/md-vs-ipynb) to learn more about the reasoning behind the choice.
-However, we add it here that you can easily have the same user experience in JupyterLab if these two dependencies are installed:
- - [jupytext library](https://pypi.org/project/jupytext/)
- - [jupyterlab-myst JupyterLab extension](https://pypi.org/project/jupyterlab-myst/)
+The repository also includes a [Guide to Contributing][] tutorials. This
+provides for a good overview of what this is like to use.
 
-
-## Goals
-
-- Make content easy to explore and try in a variety of modes:
-  - interactive and non-interactive
-  - local and cloud-based
-  - Jupyter and not-Jupyter
-- Document an accessible development workflow, so that non-experts can contribute.
-- Keep the infrastructure as simple as possible.
-
-## To Do
-
-- Test execution _of changed tutorials only_ in CI on PR.
-- Set up devcontainer.
-- Add example with additional dependencies.
-
-## Prior Art
-
-Examples that this is drawing from:
-
-- https://github.com/Caltech-IPAC/irsa-tutorials
-- https://github.com/MotherDuck-Open-Source/sql-tutorial
+[Myst Markdown]: https://mystmd.org/guide/typography
+[static site example]: https://scientific-python.github.io/exeuctable-tutorials/
+[binder example]: https://mybinder.org/v2/gh/scientific-python/executable-tutorials/main
+[jupyterlite example]: https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html
+[Guide to Contributing]: https://scentific-python.org/executable-tutorials/contributing.html
