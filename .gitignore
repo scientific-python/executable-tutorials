@@ -1,6 +1,8 @@
 _build/*
 .ipynb_checkpoints
 /.pixi/*
+# Notebooks are stored in the text-based Markdown format.
+# No .ipynb files should be stored in this repository.
 *.ipynb
 
 # We treat this repository as a library, not an application, and thus we do not
