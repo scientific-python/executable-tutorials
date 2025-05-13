@@ -11,3 +11,4 @@ pytest
 nbval
 pytest-custom_exit_code
 jupytext
+jupyterlab-myst
