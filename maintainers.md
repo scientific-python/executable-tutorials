@@ -24,6 +24,8 @@ jobs:
 ```
 
 [^1]: [jupytext][] and the [jupyterlab-myst JupyterLab extension][]
+
 [^2]: See `.binder/postBuild` and `.binder/overrides.json`.
+
 [jupytext]: https://pypi.org/project/jupytext/
 [jupyterlab-myst JupyterLab extension]: https://pypi.org/project/jupyterlab-myst/
