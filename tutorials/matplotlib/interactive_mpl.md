@@ -28,8 +28,8 @@ If we do nothing else, this will display a snapshot of the currently-blank canva
 :tags: [hide-output]
 import matplotlib.pyplot as plt
 
-
-plt.plot([1,2,3])
+fig, ax = plt.subplots()
+ax.plot([1, 2, 3])
 ```
 ````
 
@@ -38,28 +38,28 @@ plt.plot([1,2,3])
 
 import matplotlib.pyplot as plt
 
-plt.figure()
+fig, ax = plt.subplots()
 ```
 
 Plotting data to an existing figure updates the original interactive canvas in Jupyter Lab. Users can scroll up to pan and zoom.
 
-To show an updated snapshot in the rendered HTML documentation, we should call `plt.gcf()` to display the current Figure.
+To show an updated snapshot in the rendered HTML documentation, we should place a reference to our figure, `fig`, on the last line of the cell to display the current Figure.
 
 ```{caution}
-If you re-render the canvas---such as by displaying `plt.gcf().canvas`---that will cause the cached snapshot of the figures above to update to show the latest version of the figure, ruining the sequential narrative in the rendered HTML documentation.
+If you re-render the canvas---such as by displaying `fig.canvas`---that will cause the cached snapshot of the figures above to update to show the latest version of the figure, ruining the sequential narrative in the rendered HTML documentation.
 
-This is due to a detail of the matplotlib--Jupyter interaction. Just know to use `plt.gcf()` to safely show snapshots.
+This is due to a detail of the matplotlib--Jupyter interaction. Just know to use `fig` to safely show snapshots.
 ```
 
 ```{code-cell} ipython3
-plt.plot([1, 2, 3, 4])
+ax.plot([1, 2, 3, 4])
 ```
 
 ```{code-cell} ipython3
-plt.gcf()
+fig
 ```
 
 ```{code-cell} ipython3
-plt.plot([1, 4, 9, 16])
-plt.gcf()
+ax.plot([1, 4, 9, 16])
+fig
 ```
