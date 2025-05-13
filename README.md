@@ -25,11 +25,38 @@ covering some core features:
   - (Experimental) In the user's browser via Jupyter Lite ([example][jupyterlite example])
 - The examples can be tested using `pytest`, both locally and on CI.
 
-The repository also includes a [Guide to Contributing][] tutorials. This
-provides for a good overview of what this is like to use.
+## Try It Out
+
+- Read the [published examples][static site example].
+
+- Open it on [Binder][binder example] to run the examples in the cloud.
+
+- Download and run the examples locally.
+
+  ```sh
+  git clone https://github.com/scientific-python/executable-tutorials
+  ```
+
+  For users of [pixi][]:
+
+  ```sh
+  pixi run start
+  ```
+
+  Alternatively, install the requirements with pip and start JupyterLab.
+
+  ```sh
+  pip install -r requirements.txt
+  jupyter lab
+  ```
+
+## Make Your Own
+
+See the [Guide for Maintainers][] to create your own collection of tutorials.
 
 [Myst Markdown]: https://mystmd.org/guide/typography
 [static site example]: https://scientific-python.github.io/exeuctable-tutorials/
 [binder example]: https://mybinder.org/v2/gh/scientific-python/executable-tutorials/main
 [jupyterlite example]: https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html
-[Guide to Contributing]: https://scentific-python.org/executable-tutorials/contributing.html
+[pixi]: https://pixi.sh/
+[Guide for Maintainers]: https://scientific-python.github.io/executable-tutorials/maintainer-guide.html
