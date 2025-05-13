@@ -1,7 +1,7 @@
-# Executable Tutorials
+# Executable Tutorials Repo setup best practices
 
 
-## Example recipes
+## Example Tutorials
 
 ```{toctree}
 ---
