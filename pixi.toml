@@ -23,7 +23,7 @@ build = { cmd = [
 ] }
 clean = "rm -rf _build/*"
 start = "jupyter lab"
-test = "./test.sh"
+test = "bash ./test.sh"
 
 [activation]
 scripts = ["setup_jupyterlab_config.sh"]
