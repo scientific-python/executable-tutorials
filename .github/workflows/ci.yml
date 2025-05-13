@@ -30,9 +30,9 @@ jobs:
         name: ['with Python 3.12',]
 
         include:
-          - python-version: '3.10'
-            toxenv: py310-test-oldestdeps
-            name: with Python 3.10 and oldest versioned dependencies
+          - python-version: '3.11'
+            toxenv: py311-test-oldestdeps
+            name: with Python 3.11 and oldest versioned dependencies
             os: ubuntu-latest
 
           - python-version: '3.13'
