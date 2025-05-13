@@ -7,20 +7,25 @@ notebook_files=()
 all_markdown_files=$(find tutorials -type f -name "*.md")
 
 if [ $# -gt 0 ]; then
-    if [[ "$1" == all ]]; then
-        files_to_process=$all_markdown_files
+    echo "INFO: Testing only a subset of notebooks"
+    if [[ "$1" == --changed ]]; then
+        # We only want to run tests for the notebooks we touched compared to `branch`
+        # provided in the second argument.
+        branch=$2
+        files_to_process=$(git fetch ${branch} --depth=1; git diff ${branch} --name-only tutorials | grep .md)
+
     else
         files_to_process="$@"
     fi
 
 else
-    # We only want to run tests for the notebooks we touched
-    files_to_process=$(git fetch origin main --depth=1; git diff origin/main --name-only tutorials | grep .md)
+    echo "INFO: Testing all the notebooks"
+    files_to_process=$all_markdown_files
+
 fi
 
 # Identify Markdown files that are Jupytext and convert them all.
 for file in ${files_to_process}; do
-    echo loop in $file
     # Extract the kernel information from the Jupytext Markdown file.
     kernel_info=$(grep -A 10 '^---$' "$file" | grep -E 'kernelspec')
     # Skip if no kernel information was found.
