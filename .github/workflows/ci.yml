@@ -88,3 +88,15 @@ jobs:
 
     - name: Test all files
       run: pixi run test
+
+  pixi_build:
+    name: Build static site with pixi
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup pixi
+      uses: prefix-dev/setup-pixi@v0.8.1
+
+    - name: Build static site
+      run: pixi run build
