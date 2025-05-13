@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  tests:
+  tox_test:
     name: ${{ matrix.os }} ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -52,8 +52,7 @@ jobs:
     - name: Test with tox
       run: tox ${{ matrix.toxargs }} -e ${{ matrix.toxenv }} -- ${{ matrix.toxposargs }}
 
-
-  gha_buildhtml:
+  tox_build:
     name: Buildhtml testing
     runs-on: ubuntu-latest
     steps:
