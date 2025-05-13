@@ -27,7 +27,7 @@ for file in ${files_to_process}; do
     notebook_files+=("${notebook_file}")
 done
 
-pytest --nbval-lax
+pytest --nbval-lax -vv --suppress-no-test-exit-code --durations=10
 
 # Clean up ipynb files that were converted.  Any stray ipynb files that were
 # _not_ the result of conversion from Markdown will be left alone.
