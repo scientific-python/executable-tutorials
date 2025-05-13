@@ -53,4 +53,7 @@ html_theme_options = {
     "use_repository_button": True,
     "use_issues_button": True,
     "use_edit_page_button": True,
+    "launch_buttons": {
+        "binderhub_url": "https://mybinder.org"
+    },
 }
