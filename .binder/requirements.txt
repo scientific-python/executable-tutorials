@@ -1,0 +1,4 @@
+ipympl
+jupyterlab-myst
+jupytext
+matplotlib
