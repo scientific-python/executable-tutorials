@@ -54,6 +54,6 @@ html_theme_options = {
     "use_issues_button": True,
     "use_edit_page_button": True,
     "launch_buttons": {
-        "binderhub_url": "https://mybinder.org/v2/gh/scientific-python/executable-tutorials/HEAD?urlpath=%2Fdoc%2Ftree%2Ftutorials"
+        "binderhub_url": "https://mybinder.org"
     },
 }
