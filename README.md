@@ -29,6 +29,8 @@ covering some core features:
 
 - Read the [published examples][static site example].
 
+- Open it on [Binder][binder example] to run the examples in the cloud.
+
 - Download and run the examples locally.
 
   ```sh
