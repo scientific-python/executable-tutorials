@@ -17,12 +17,12 @@ This repository demonstrates one way to configure a collection of tutorials,
 covering some core features:
 
 - Source is in [MyST Markdown][] which is easy for humans to edit and review.
-- The executed examples---code and results---are published as a
+- The executed examples—code and results—are published as a
   [static site][static site example].
 - The examples can be opened as Jupyter notebooks to run and edit:
   - In a user's local environment
-  - On a [Binder][binder example]
-  - (Experimental) In the user's browser via [Jupyter Lite app][jupyterlite example]
+  - In the cloud using [Binder][binder example]
+  - (Experimental) In the user's browser via a [Jupyter Lite app][jupyterlite example]
 - The examples can be tested using `pytest`, both locally and on CI.
 
 ## Try It Out
