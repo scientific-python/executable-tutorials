@@ -2,6 +2,7 @@
 sphinx
 myst-nb
 sphinx-book-theme
+sphinx-design
 ipympl
 sphinx-copybutton
 # For tutorials
