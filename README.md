@@ -1,43 +1,62 @@
 # Executable Tutorials
 
-A repository demonstrating one way to manage and distribute interactive tutorials.
-See the [Guide to Contributing](https://scentific-python.org/executable-tutorials/contributing.html)
-for a good overview of what this is like to use.
+## Use Cases
 
-## Demo Links
+Many organizations maintain collections of tutorials addressing realistic
+problems in a science domain, with runnable code examples written and
+kept current by experts in the tools. They are useful as:
 
-- **[Tutorials](https://github.com/scientific-python/executable-tutorials/tree/main/tutorials)** are written in MyST Markdown.
-- Tutorials can be easily edited as notebooks in JupyterLab.
-- Executed tutorials are **[published](https://scientific-python.github.io/exeuctable-tutorials/)** on a GitHub Pages site.
-- **[Jupyter Lite (beta)](https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html)** (works only on the basic executable example so far, missing dependencies for others)
-- **[Binder](https://mybinder.org/v2/gh/scientific-python/executable-tutorials/notebooks)**
+- A trove of working snippets to copy and paste
+- A maintained resource for self-guided learning
+- A ready-to-use curriculum for hands-on workshops
+- A suite of science domain-specific "integration tests" for the showcased libraries
 
-### Notes on the notebook file format
+## Key Features
 
-We do use MyST Markdown format for the notebooks, please visit [the upstream documentation](https://mystmd.org/guide/md-vs-ipynb) to learn more about the reasoning behind the choice.
-However, we add it here that you can easily have the same user experience in JupyterLab if these two dependencies are installed:
- - [jupytext library](https://pypi.org/project/jupytext/)
- - [jupyterlab-myst JupyterLab extension](https://pypi.org/project/jupyterlab-myst/)
+This repository demonstrates one way to configure a collection of tutorials,
+covering some core features:
 
+- Source is in [MyST Markdown][] which is easy for humans to edit and review.
+- The executed examples—code and results—are published as a
+  [static site][static site example].
+- The examples can be opened as Jupyter notebooks to run and edit:
+  - In a user's local environment
+  - In the cloud using [Binder][binder example]
+  - (Experimental) In the user's browser via a [Jupyter Lite app][jupyterlite example]
+- The examples can be tested using `pytest`, both locally and on CI.
 
-## Goals
+## Try It Out
 
-- Make content easy to explore and try in a variety of modes:
-  - interactive and non-interactive
-  - local and cloud-based
-  - Jupyter and not-Jupyter
-- Document an accessible development workflow, so that non-experts can contribute.
-- Keep the infrastructure as simple as possible.
+- Read the [published examples][static site example].
 
-## To Do
+- Open it on [Binder][binder example] to run the examples in the cloud.
 
-- Test execution _of changed tutorials only_ in CI on PR.
-- Set up devcontainer.
-- Add example with additional dependencies.
+- Download and run the examples locally.
 
-## Prior Art
+  ```sh
+  git clone https://github.com/scientific-python/executable-tutorials
+  ```
 
-Examples that this is drawing from:
+  For users of [pixi][]:
 
-- https://github.com/Caltech-IPAC/irsa-tutorials
-- https://github.com/MotherDuck-Open-Source/sql-tutorial
+  ```sh
+  pixi run start
+  ```
+
+  Alternatively, install the requirements with pip and start JupyterLab.
+
+  ```sh
+  pip install -r requirements.txt
+  jupyter lab
+  ```
+
+## Make Your Own
+
+See the [Guide for Maintainers][] to create your own collection of tutorials.
+
+[Myst Markdown]: https://mystmd.org/guide/typography
+[static site example]: https://scientific-python.github.io/exeuctable-tutorials/
+[binder example]: https://mybinder.org/v2/gh/scientific-python/executable-tutorials/main
+[jupyterlite example]: https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html
+[pixi]: https://pixi.sh/
+[Guide for Maintainers]: https://scientific-python.github.io/executable-tutorials/maintainer-guide.html

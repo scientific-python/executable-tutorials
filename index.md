@@ -24,5 +24,5 @@ caption: Contributing
 ---
 
 contributing
-maintainers
+maintainer-guide
 ```
