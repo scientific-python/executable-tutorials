@@ -29,6 +29,12 @@ done
 
 pytest --nbval-lax -vv --suppress-no-test-exit-code --durations=10
 
+_exitval="$?"
+
+if [ $_exitval > 0 ]; then
+    exit $_exitval
+fi
+
 # Clean up ipynb files that were converted.  Any stray ipynb files that were
 # _not_ the result of conversion from Markdown will be left alone.
 for file in "${notebook_files[@]}"; do
