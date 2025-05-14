@@ -41,18 +41,13 @@ pytest = ">=8.3.5,<9"
 #jupytext = ">=1.17.1,<2"
 
 [pypi-dependencies]
-sphinx = ">=8.0.2"
-myst-nb = ">=1.1"
-jupytext = ">=1.16"
-sphinx-book-theme = ">=1.1"
-sphinx-copybutton = ">=0.5"
-sphinx-design = "*"
-pytest-custom_exit_code = "*"
 #sphinx = ">=8.0.2"
 #myst-nb = ">=1.1"
 #jupytext = ">=1.16"
 #sphinx-book-theme = ">=1.1"
 #sphinx-copybutton = ">=0.5"
+#sphinx-design = "*"
+#pytest-custom_exit_code = "*"
 
 [feature.py312]
 platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
