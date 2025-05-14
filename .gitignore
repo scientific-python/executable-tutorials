@@ -95,6 +95,9 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Jupyterlite Database
+.jupyterlite.doit.db
+
 # IPython
 profile_default/
 ipython_config.py

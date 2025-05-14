@@ -5,10 +5,10 @@ authors = [
     "Ross Barnowski <rossbar@caltech.edu>",
     "Kyle Sunden <git@ksunden.space>",
 ]
-channels = ["conda-forge"]
+channels = ["https://repo.mamba.pm/emscripten-forge", "conda-forge"]
 description = "Add a short description here"
 name = "executable-tutorials"
-platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64", "emscripten-wasm32"]
 version = "0.1.0"
 
 [tasks]
@@ -34,11 +34,11 @@ scripts = ["bash .binder/postBuild"]
 [dependencies]
 python = ">=3.11"
 matplotlib-base = ">=3.9"
-ipympl = ">=0.9"
-jupyterlab = ">=4.2"
-jupyterlab-myst = ">=2.4"
+#jupyterlab = ">=4.2"
+#jupyterlab-myst = ">=2.4"
 pytest = ">=8.3.5,<9"
-nbval = ">=0.11.0,<0.12"
+#nbval = ">=0.11.0,<0.12"
+#jupytext = ">=1.17.1,<2"
 
 [pypi-dependencies]
 sphinx = ">=8.0.2"
@@ -48,20 +48,61 @@ sphinx-book-theme = ">=1.1"
 sphinx-copybutton = ">=0.5"
 sphinx-design = "*"
 pytest-custom_exit_code = "*"
+#sphinx = ">=8.0.2"
+#myst-nb = ">=1.1"
+#jupytext = ">=1.16"
+#sphinx-book-theme = ">=1.1"
+#sphinx-copybutton = ">=0.5"
+
+[feature.py312]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 
 [feature.py312.dependencies]
 python = "3.12.*"
 
+[feature.py313]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
 [feature.py313.dependencies]
 python = "3.13.*"
 
-[feature.jupyterlite.dependencies]
+[feature.jupyterlite-runtime]
+channels = ["https://repo.mamba.pm/emscripten-forge", "conda-forge"]
+platforms = ["emscripten-wasm32"]
+
+[feature.jupyterlite-runtime.dependencies]
+xeus-python = "*"
+python = "*"
+matplotlib = "*"
+ipympl = "*"
+jupytext = "*"
+
+[feature.jupyterlite-host]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[feature.jupyterlite-host.dependencies]
 jupyterlab = "~=4.2.4"
 jupyterlite-core = "==0.4.0"
-jupyterlite-pyodide-kernel = "==0.4.1"
+jupyterlite-xeus = "*"
 notebook = "~=7.2.1"
+jupyterlab-myst = ">=2.4"
+
+[feature.jupyterlite-host.tasks]
+setup_wasm = {cmd = "pixi install -e jupyterlite-runtime", inputs = ["pixi.lock"]}
+
+[feature.jupyterlite-host.tasks.build_wasm]
+cmd = "jupyter lite build --XeusAddon.prefix=.pixi/envs/jupyterlite-runtime --contents tutorials --output-dir build/html/jupyterlite --settings-overrides=jupyterlab_config.json --log-level DEBUG"
+depends-on = ["setup_wasm"]
+outputs = ["build/html/jupyterlite/"]
+inputs = ["pixi.lock", "tutorials/"]
+
+[feature.jupyterlite-host.tasks.start_wasm]
+cmd = "python -m http.server 8000 -d build/html/jupyterlite/"
+depends-on = ["build_wasm"]
 
 [environments]
 py312 = ["py312"]
 py313 = ["py313"]
-jupyterlite = ["jupyterlite"]
+jupyterlite-runtime = ["jupyterlite-runtime"]
+jupyterlite-host = ["jupyterlite-host"]
