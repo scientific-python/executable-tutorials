@@ -9,7 +9,7 @@ kept current by experts in the tools. They are useful as:
 - A trove of working snippets to copy and paste
 - A maintained resource for self-guided learning
 - A ready-to-use curriculum for hands-on workshops
-- A suite of science domain-specific "integration tests"
+- A suite of science domain-specific "integration tests" for the showcased libraries
 
 ## Key Features
 
