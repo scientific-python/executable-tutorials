@@ -100,3 +100,19 @@ jobs:
 
     - name: Build static site
       run: pixi run build
+
+  myst_build:
+    name: Build and execute static site with myst
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup environment
+      run: pip install -r requirements.txt
+    - name: Build site with execution
+      run: |
+        myst build --execute 2>&1 |tee /tmp/mystbuild.log
+        if grep -q "Traceback .most recent call last." /tmp/mystbuild.log; then
+            exit 1;
+        else
+            exit 0;
+        fi
