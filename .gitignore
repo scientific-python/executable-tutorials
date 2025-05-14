@@ -189,6 +189,3 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-
-# MyST build outputs
-_build
