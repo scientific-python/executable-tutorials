@@ -11,7 +11,10 @@ name = "executable-tutorials"
 platforms = ["linux-64", "osx-64", "osx-arm64", "win-64", "emscripten-wasm32"]
 version = "0.1.0"
 
-[tasks]
+[feature.base]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[feature.base.tasks]
 build = { cmd = [
     "sphinx-build",
     ".",  # source directory
@@ -25,29 +28,30 @@ clean = "rm -rf _build/*"
 start = "jupyter lab  --FileContentsManager.preferred_dir tutorials"
 test = "bash ./test.sh"
 
-[activation]
+[feature.base.activation]
 # Workaround overrides JupyterLab configuration (at the environment level) to
 # make double-clicking on a Jupytext Markdown file open that file as a
 # notebook. This is important for the development workflow for contributors.
 scripts = ["bash {$PIXI_PROJECT_ROOT}/.binder/postBuild"]
 
-[dependencies]
+[feature.base.dependencies]
 python = ">=3.11"
 matplotlib-base = ">=3.9"
-#jupyterlab = ">=4.2"
-#jupyterlab-myst = ">=2.4"
+jupyterlab = ">=4.2"
+jupyterlab-myst = ">=2.4"
 pytest = ">=8.3.5,<9"
-#nbval = ">=0.11.0,<0.12"
-#jupytext = ">=1.17.1,<2"
+nbval = ">=0.11.0,<0.12"
+jupytext = ">=1.17.1,<2"
+ipympl = "*"
 
-[pypi-dependencies]
-#sphinx = ">=8.0.2"
-#myst-nb = ">=1.1"
-#jupytext = ">=1.16"
-#sphinx-book-theme = ">=1.1"
-#sphinx-copybutton = ">=0.5"
-#sphinx-design = "*"
-#pytest-custom_exit_code = "*"
+[feature.base.pypi-dependencies]
+sphinx = ">=8.0.2"
+myst-nb = ">=1.1"
+jupytext = ">=1.16"
+sphinx-book-theme = ">=1.1"
+sphinx-copybutton = ">=0.5"
+sphinx-design = "*"
+pytest-custom_exit_code = "*"
 
 [feature.py312]
 platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
@@ -97,7 +101,8 @@ cmd = "python -m http.server 8000 -d _build/html/jupyterlite/"
 depends-on = ["build_wasm"]
 
 [environments]
-py312 = ["py312"]
-py313 = ["py313"]
+default = ["base"]
+py312 = ["base", "py312"]
+py313 = ["base", "py313"]
 jupyterlite-runtime = ["jupyterlite-runtime"]
 jupyterlite-host = ["jupyterlite-host"]
