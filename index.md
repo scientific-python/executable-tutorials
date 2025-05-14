@@ -25,8 +25,8 @@ launch JupyterLab.
 git clone https://github.com/scientific-python/executable-tutorials
 cd executable-tutorials
 
-python -m venv venv
-source venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 
 pip install -r requirements.txt
 jupyter lab
