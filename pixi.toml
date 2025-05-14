@@ -46,6 +46,7 @@ myst-nb = ">=1.1"
 jupytext = ">=1.16"
 sphinx-book-theme = ">=1.1"
 sphinx-copybutton = ">=0.5"
+sphinx-design = "*"
 pytest-custom_exit_code = "*"
 
 [feature.py312.dependencies]
