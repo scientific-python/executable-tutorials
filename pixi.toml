@@ -22,7 +22,7 @@ build = { cmd = [
     "--keep-going",  # do not stop on error
 ] }
 clean = "rm -rf _build/*"
-start = "jupyter lab"
+start = "jupyter lab  --FileContentsManager.preferred_dir tutorials"
 test = "bash ./test.sh"
 
 [activation]
