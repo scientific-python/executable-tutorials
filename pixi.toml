@@ -42,7 +42,7 @@ jupyterlab-myst = ">=2.4"
 pytest = ">=8.3.5,<9"
 nbval = ">=0.11.0,<0.12"
 jupytext = ">=1.17.1,<2"
-ipympl = "*"
+ipympl = ">=0.9"
 
 [feature.base.pypi-dependencies]
 sphinx = ">=8.0.2"
@@ -71,10 +71,10 @@ platforms = ["emscripten-wasm32"]
 
 [feature.jupyterlite-runtime.dependencies]
 xeus-python = "*"
-python = "*"
-matplotlib = "*"
-ipympl = "*"
-jupytext = "*"
+python = ">=3.11"
+matplotlib = ">=3.9"
+ipympl = ">=0.9"
+jupytext = ">=1.16"
 
 [feature.jupyterlite-host]
 channels = ["conda-forge"]
