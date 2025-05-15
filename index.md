@@ -1,6 +1,10 @@
-# Executable Tutorials Repo setup best practices
+# Executable Tutorials
 
-## How to Run The Code Yourself
+This is meant to demonstrate how to deploy tutorial materials. The examples
+show common patterns including runnable code, plots, exercises with solutions,
+etc.
+
+## How to Run The Code
 
 `````{tab-set}
 ````{tab-item} Locally with pixi
