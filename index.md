@@ -1,8 +1,8 @@
 # Executable Tutorials
 
-This is meant to demonstrate how to deploy tutorial materials. The examples
-show common patterns including runnable code, plots, exercises with solutions,
-etc.
+This is meant to demonstrate by example how to deploy tutorial materials. The
+examples show common patterns including runnable code, plots, exercises with
+solutions, etc.
 
 ## How to Run The Code
 
