@@ -25,13 +25,8 @@ launch JupyterLab.
 git clone https://github.com/scientific-python/executable-tutorials
 cd executable-tutorials
 
-<<<<<<< HEAD
 python -m venv .venv
 source .venv/bin/activate
-=======
-python -m venv venv
-source venv/bin/activate
->>>>>>> d8cca2b (Explain how to launch executable tutorials.)
 
 pip install -r requirements.txt
 jupyter lab
