@@ -55,7 +55,7 @@ covering some core features:
 See the [Guide for Maintainers][] to create your own collection of tutorials.
 
 [Myst Markdown]: https://mystmd.org/guide/typography
-[static site example]: https://scientific-python.github.io/exeuctable-tutorials/
+[static site example]: https://scientific-python.github.io/executable-tutorials/
 [binder example]: https://mybinder.org/v2/gh/scientific-python/executable-tutorials/main
 [jupyterlite example]: https://scientific-python.github.io/executable-tutorials/jupyterlite/lab/index.html
 [pixi]: https://pixi.sh/
