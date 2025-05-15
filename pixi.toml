@@ -89,10 +89,11 @@ jupyterlab-myst = ">=2.4"
 
 [feature.jupyterlite-host.tasks]
 setup_wasm = {cmd = "pixi install -e jupyterlite-runtime", inputs = ["pixi.lock"]}
+convert_ipynbs = {cmd = "bash convert_all_jupyterlite.sh", inputs = ["tutorials/"], outputs = ["_build/ipynbs"]}
 
 [feature.jupyterlite-host.tasks.build_wasm]
-cmd = "jupyter lite build --XeusAddon.prefix=.pixi/envs/jupyterlite-runtime --contents tutorials --output-dir _build/html/jupyterlite --settings-overrides=.binder/overrides.json --log-level DEBUG"
-depends-on = ["setup_wasm"]
+cmd = "jupyter lite build --XeusAddon.prefix=.pixi/envs/jupyterlite-runtime --contents _build/ipynbs/tutorials --output-dir _build/html/jupyterlite --settings-overrides=.binder/overrides.json --log-level DEBUG"
+depends-on = ["setup_wasm", "convert_ipynbs"]
 outputs = ["_build/html/jupyterlite/"]
 inputs = ["pixi.lock", "tutorials/"]
 
