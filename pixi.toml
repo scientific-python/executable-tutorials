@@ -86,6 +86,7 @@ jupyterlite-core = "==0.4.0"
 jupyterlite-xeus = "*"
 notebook = "~=7.2.1"
 jupyterlab-myst = ">=2.4"
+jupytext = ">=1.16"
 
 [feature.jupyterlite-host.tasks]
 setup_wasm = {cmd = "pixi install -e jupyterlite-runtime", inputs = ["pixi.lock"]}
