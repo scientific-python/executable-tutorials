@@ -1,8 +1,11 @@
 name: Run CircleCI asrtifacts redirector for rendered HTML
 on: [status]
+
 jobs:
    circleci_artifacts_redirector_job:
      runs-on: ubuntu-latest
+     permissions:
+       statuses: write
      name: Run CircleCI artifacts redirector
      steps:
        - name: GitHub Action step
