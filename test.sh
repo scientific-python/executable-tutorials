@@ -31,7 +31,7 @@ pytest --nbval-lax -vv --suppress-no-test-exit-code --durations=10
 
 _exitval="$?"
 
-if [ $_exitval > 0 ]; then
+if [[ $_exitval > 0 ]]; then
     exit $_exitval
 fi
 
