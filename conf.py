@@ -15,6 +15,7 @@ extensions = [
     "myst_nb",
     "sphinx_copybutton",
     "sphinx_design",
+    "sphinx_thebe",
 ]
 
 myst_enable_extensions = [
@@ -56,6 +57,7 @@ html_theme_options = {
     "use_issues_button": True,
     "use_edit_page_button": True,
     "launch_buttons": {
-        "binderhub_url": "https://mybinder.org"
+        "binderhub_url": "https://mybinder.org",
+        "thebe": True,
     },
 }

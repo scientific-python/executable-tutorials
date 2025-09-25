@@ -27,6 +27,7 @@ build = { cmd = [
 clean = "rm -rf _build/*"
 start = "jupyter lab  --FileContentsManager.preferred_dir tutorials"
 test = "bash ./test.sh"
+serve = "python -m http.server 8000 -d _build/html"
 
 [feature.base.activation]
 # Workaround overrides JupyterLab configuration (at the environment level) to
@@ -43,6 +44,7 @@ pytest = ">=8.3.5,<9"
 nbval = ">=0.11.0,<0.12"
 jupytext = ">=1.17.1,<2"
 ipympl = ">=0.9"
+sphinx-thebe = ">=0.3.1"
 
 [feature.base.pypi-dependencies]
 sphinx = ">=8.0.2"

@@ -3,6 +3,7 @@ sphinx
 myst-nb
 sphinx-book-theme
 sphinx-design
+sphinx-thebe>=0.3.1
 ipympl
 sphinx-copybutton
 # For tutorials
