@@ -13,3 +13,6 @@ nbval
 pytest-custom_exit_code
 jupytext
 jupyterlab-myst
+# For myst stack
+mystmd
+jupyter

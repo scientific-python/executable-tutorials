@@ -38,7 +38,8 @@ exclude_patterns = [
 nb_merge_streams = True
 nb_execution_mode = "cache"
 
-nb_execution_excludepatterns = []
+# We do ignore the JB2 landing page when rendering with JB1
+exclude_patterns += ['index_jb2.md']
 
 
 # -- Options for HTML output -------------------------------------------------
